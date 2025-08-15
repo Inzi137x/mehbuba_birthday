@@ -203,13 +203,13 @@
                             <div class="title-underline"></div>
                         </h3>
                         <div class="video-container">
-                            <video id="birthdayVideo" controls autoplay muted loop>
+                            <video id="birthdayVideo" controls loop>
                                 <source src="{{ url_for('static', filename='uploads/video.mp4') }}" type="video/mp4">
                                 <p>Your browser doesn't support HTML5 video. Please upload a video file.</p>
                             </video>
                         </div>
                         <!-- Video Upload Form -->
-                        <div class="upload-section mt-3">
+                        <!-- <div class="upload-section mt-3">
                             <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="upload-form">
                                 <input type="hidden" name="type" value="video">
                                 <div class="input-group">
@@ -219,7 +219,7 @@
                                     </button>
                                 </div>
                             </form>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

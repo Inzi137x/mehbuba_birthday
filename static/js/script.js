@@ -49,7 +49,7 @@ function initVideoPlayer() {
         
         // Auto-play with user interaction fallback
         video.addEventListener('loadedmetadata', function() {
-            const playPromise = video.play();
+            const playPromise = video.pause();
             if (playPromise !== undefined) {
                 playPromise.catch(function(error) {
                     console.log('Auto-play prevented:', error);

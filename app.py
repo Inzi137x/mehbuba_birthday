@@ -55,6 +55,10 @@ def upload_file():
             new_filename = f'photo1.{file_extension}'
         elif file_type == 'photo2':
             new_filename = f'photo2.{file_extension}'
+        elif file_type == 'hero-photo1':
+            new_filename = f'hero-photo1.{file_extension}'
+        elif file_type == 'hero-photo2':
+            new_filename = f'hero-photo2.{file_extension}'
         else:
             new_filename = filename
             

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love Mehbuba Rahman</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Floating Hearts Animation -->
+    <div class="floating-hearts">
+        <i class="fas fa-heart heart-1"></i>
+        <i class="fas fa-heart heart-2"></i>
+        <i class="fas fa-heart heart-3"></i>
+        <i class="fas fa-heart heart-4"></i>
+        <i class="fas fa-heart heart-5"></i>
+        <i class="fas fa-heart heart-6"></i>
+    </div>
+
+    <!-- Birthday Stickers -->
+    <div class="birthday-stickers">
+        <img src="https://pixabay.com/get/g8ef6c42e60ca58b52208b6303e2aa768c1cd9bf2de6e2218544aaee0d65e6b0d0034de9c329336f1c96d66d41c5b7a2e2e179c9df43bf40525dbe7919b9a9c8c_1280.jpg" class="sticker sticker-1" alt="Birthday Sticker">
+        <img src="https://pixabay.com/get/g100115c8126b1791e12093a44cd0375fc8026aee487cefdd5057f57b5468485623be76898cf40d7accceb15c7028cb273137802cdd64d5680820634e980f87e9_1280.jpg" class="sticker sticker-2" alt="Birthday Sticker">
+        <img src="https://pixabay.com/get/gb3da5f526164784faa7fc75f66a00e546051ab30b37eb74938c513696537cbd88524e1db7c4efe3a185a74b5c721e83522ff0a9c057b3e24c2202ae3a96adaf2_1280.jpg" class="sticker sticker-3" alt="Birthday Sticker">
+        <img src="https://pixabay.com/get/g2049b0a77aa4ec8d1f2d68f015b5158602b2a65bb2a69f01c5f41f000937a28e0660f2582144610707f00b4c624421d3e954216aa63f4c9679a1198ad520abb5_1280.jpg" class="sticker sticker-4" alt="Love Icon">
+    </div>
+
+    <!-- Main Container -->
+    <div class="container-fluid">
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-info alert-dismissible fade show mt-3" role="alert">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Hero Section with Animated Title -->
+        <section class="hero-section text-center py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="hero-title">
+                        <span class="word word-1">Happy</span>
+                        <span class="word word-2">Birthday</span>
+                        <span class="word word-3">My</span>
+                        <span class="word word-4">Love</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Mehbuba Rahman</h2>
+                    <div class="hero-icons">
+                        <i class="fas fa-birthday-cake cake-icon"></i>
+                        <i class="fas fa-heart love-icon"></i>
+                        <i class="fas fa-gift gift-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-section py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="video-frame">
+                        <h3 class="section-title text-center mb-4">
+                            <i class="fas fa-play-circle"></i> Special Video for You
+                        </h3>
+                        <div class="video-container">
+                            <video id="birthdayVideo" controls autoplay muted loop>
+                                <source src="{{ url_for('static', filename='uploads/video.mp4') }}" type="video/mp4">
+                                <p>Your browser doesn't support HTML5 video. Please upload a video file.</p>
+                            </video>
+                        </div>
+                        <!-- Video Upload Form -->
+                        <div class="upload-section mt-3">
+                            <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="upload-form">
+                                <input type="hidden" name="type" value="video">
+                                <div class="input-group">
+                                    <input type="file" class="form-control" name="file" accept="video/*" required>
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="fas fa-upload"></i> Upload Video
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Frames Section -->
+        <section class="photo-section py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h3 class="section-title text-center mb-5">
+                        <i class="fas fa-images"></i> Beautiful Memories
+                    </h3>
+                    <div class="row">
+                        <!-- Photo Frame 1 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="photo-frame frame-1">
+                                <div class="frame-decorations">
+                                    <i class="fas fa-heart decoration-heart-1"></i>
+                                    <i class="fas fa-star decoration-star-1"></i>
+                                </div>
+                                <div class="photo-container">
+                                    <img id="photo1" src="{{ url_for('static', filename='uploads/photo1.jpg') }}" alt="Beautiful Memory 1" onerror="this.src='https://pixabay.com/get/gb5f31887106003846259ef0d61f8d64b10ccb2f68ff822e77df5600b57e066c5aab89c063185533bcc715cd1af1cdff3253d08f6113a35a17433084f46b065a9_1280.jpg'">
+                                </div>
+                                <div class="frame-caption">My Beautiful Love</div>
+                                <!-- Photo 1 Upload Form -->
+                                <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="upload-form mt-3">
+                                    <input type="hidden" name="type" value="photo1">
+                                    <div class="input-group input-group-sm">
+                                        <input type="file" class="form-control" name="file" accept="image/*">
+                                        <button class="btn btn-outline-primary btn-sm" type="submit">
+                                            <i class="fas fa-upload"></i> Upload
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Photo Frame 2 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="photo-frame frame-2">
+                                <div class="frame-decorations">
+                                    <i class="fas fa-heart decoration-heart-2"></i>
+                                    <i class="fas fa-star decoration-star-2"></i>
+                                </div>
+                                <div class="photo-container">
+                                    <img id="photo2" src="{{ url_for('static', filename='uploads/photo2.jpg') }}" alt="Beautiful Memory 2" onerror="this.src='https://pixabay.com/get/g3201525e703ea135e816c6829434a1e371441bc38d38a13a8232e0480afa5aff779d8ff72328a6a7c7d1a13ad87b1e4969b39990dba5edb416d867ac019958b9_1280.jpg'">
+                                </div>
+                                <div class="frame-caption">My Precious One</div>
+                                <!-- Photo 2 Upload Form -->
+                                <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="upload-form mt-3">
+                                    <input type="hidden" name="type" value="photo2">
+                                    <div class="input-group input-group-sm">
+                                        <input type="file" class="form-control" name="file" accept="image/*">
+                                        <button class="btn btn-outline-primary btn-sm" type="submit">
+                                            <i class="fas fa-upload"></i> Upload
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Letter Section -->
+        <section class="letter-section py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="letter-frame">
+                        <h3 class="section-title text-center mb-4">
+                            <i class="fas fa-envelope-heart"></i> A Letter from My Heart
+                        </h3>
+                        <div class="letter-content">
+                            <div class="letter-header">
+                                <div class="letter-date">August 15, 2025</div>
+                                <div class="letter-salutation">My Dearest Mehbuba Rahman,</div>
+                            </div>
+                            <div class="letter-body">
+                                <p>On this special day, I want you to know how much you mean to me. Every moment with you is a precious gift, and your smile lights up my world in ways I never imagined possible.</p>
+                                
+                                <p>Your laughter is my favorite melody, your happiness is my greatest achievement, and your love is my most treasured possession. Today, as we celebrate another year of your beautiful existence, I am reminded of how blessed I am to have you in my life.</p>
+                                
+                                <p>May this new year of your life bring you endless joy, countless adventures, and all the love your heart can hold. You deserve nothing but the very best, my love.</p>
+                                
+                                <p>Happy Birthday, my beautiful Mehbuba Rahman. Here's to many more years of love, laughter, and unforgettable memories together.</p>
+                            </div>
+                            <div class="letter-signature">
+                                <p>With all my love,</p>
+                                <p class="signature-name">Your Forever Love ❤️</p>
+                            </div>
+                        </div>
+                        <div class="letter-decorations">
+                            <img src="https://pixabay.com/get/g6fd3b358381e408aa43b8b893dfe5e9501a7460f77ccb5565d5c1f6e2e842979be405d8a75687940b2366118702d8f3aaa25681385569e08fd338aa054034e09_1280.jpg" class="letter-decoration decoration-1" alt="Romantic Decoration">
+                            <img src="https://pixabay.com/get/gdb9f02bb30c79513e54513c6666ffeabf51cc94be17049022d99358cf3d9a14f4b29b9a268a1d2f195b6fababca609f1e14c5b2c3c9db046094d24e9cf0dc7c6_1280.jpg" class="letter-decoration decoration-2" alt="Romantic Decoration">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Birthday Decorations Section -->
+        <section class="decorations-section py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="decoration-images">
+                        <img src="https://pixabay.com/get/gab0a92f35c0aebbda88b25d26df4452b75093e1ee204df71943766c73fea99cedf98ea55b839623b31be44d81169f64e88af06d24f705048f4040729adfad89f_1280.jpg" class="decoration-img img-1" alt="Birthday Decoration">
+                        <img src="https://pixabay.com/get/g49be7f2816bc36d323f59df2a4fc6cac099fa51fb1cb005ce5b7d99f5b7c3fc0d7d2849b1537797920a112748e4cb5a5d4d268c4481f13a33f43ad3ee954ee6a_1280.jpg" class="decoration-img img-2" alt="Birthday Decoration">
+                        <img src="https://pixabay.com/get/g77826c047fb9feb16d1dc863825bbf82b1597c593025e0f938ead0388147dc1fdbf5296b7c166d8131ae8da505d441c13603eac3c707489fb28dc34d037a7c35_1280.jpg" class="decoration-img img-3" alt="Birthday Decoration">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

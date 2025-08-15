@@ -118,7 +118,7 @@
                                 </div>
                                 <div class="frame-caption">My Beautiful Love</div>
                                 <!-- Photo 1 Upload Form -->
-                                <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="upload-form mt-3">
+                                <!-- <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="upload-form mt-3">
                                     <input type="hidden" name="type" value="photo1">
                                     <div class="input-group input-group-sm">
                                         <input type="file" class="form-control" name="file" accept="image/*">
@@ -126,7 +126,7 @@
                                             <i class="fas fa-upload"></i> Upload
                                         </button>
                                     </div>
-                                </form>
+                                </form> -->
                             </div>
                         </div>
 
@@ -142,7 +142,7 @@
                                 </div>
                                 <div class="frame-caption">My Precious One</div>
                                 <!-- Photo 2 Upload Form -->
-                                <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="upload-form mt-3">
+                                <!-- <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="upload-form mt-3">
                                     <input type="hidden" name="type" value="photo2">
                                     <div class="input-group input-group-sm">
                                         <input type="file" class="form-control" name="file" accept="image/*">
@@ -150,7 +150,34 @@
                                             <i class="fas fa-upload"></i> Upload
                                         </button>
                                     </div>
-                                </form>
+                                </form> -->
+                            </div>
+                        </div>
+
+                        <!-- Photo Frame 3 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="photo-frame frame-1">
+                                <div class="frame-decorations">
+                                    <i class="fas fa-heart decoration-heart-1"></i>
+                                    <i class="fas fa-star decoration-star-1"></i>
+                                </div>
+                                <div class="photo-container">
+                                    <img id="photo1" src="{{ url_for('static', filename='uploads/photo3.jpg') }}" alt="Beautiful Memory 1" onerror="this.src='https://pixabay.com/get/gb5f31887106003846259ef0d61f8d64b10ccb2f68ff822e77df5600b57e066c5aab89c063185533bcc715cd1af1cdff3253d08f6113a35a17433084f46b065a9_1280.jpg'">
+                                </div>
+                                <div class="frame-caption">My Beautiful Love</div>
+                            </div>
+                        </div>
+                        <!-- Photo Frame 4 -->
+                        <div class="col-md-6 mb-4">
+                            <div class="photo-frame frame-1">
+                                <div class="frame-decorations">
+                                    <i class="fas fa-heart decoration-heart-1"></i>
+                                    <i class="fas fa-star decoration-star-1"></i>
+                                </div>
+                                <div class="photo-container">
+                                    <img id="photo1" src="{{ url_for('static', filename='uploads/photo4.jpg') }}" alt="Beautiful Memory 1" onerror="this.src='https://pixabay.com/get/gb5f31887106003846259ef0d61f8d64b10ccb2f68ff822e77df5600b57e066c5aab89c063185533bcc715cd1af1cdff3253d08f6113a35a17433084f46b065a9_1280.jpg'">
+                                </div>
+                                <div class="frame-caption">My Beautiful Love</div>
                             </div>
                         </div>
                     </div>
@@ -219,7 +246,7 @@
                         </h3>
                         <div class="letter-content">
                             <div class="letter-header">
-                                <div class="letter-date">August 15, 2025</div>
+                                <div class="letter-date">August 18, 2025</div>
                                 <div class="letter-salutation">My Dearest Mehbuba Rahman,</div>
                             </div>
                             <div class="letter-body">

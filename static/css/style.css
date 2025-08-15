@@ -28,7 +28,7 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1;
+    z-index: 100000; /* Bring to front */
 }
 
 .floating-hearts i {
@@ -71,7 +71,7 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 2;
+    z-index: 9998; /* Just below hearts if needed */
 }
 
 .sticker {
@@ -139,7 +139,7 @@ body {
 
 .hero-title {
     font-family: 'Dancing Script', cursive;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 700;
     margin-bottom: 20px;
     display: flex;
@@ -169,7 +169,7 @@ body {
 
 .hero-subtitle {
     font-family: 'Dancing Script', cursive;
-    font-size: 2.5rem;
+    font-size: 3.0rem;
     color: #8e24aa;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -379,6 +379,7 @@ body {
     bottom: 0;
     pointer-events: none;
     overflow: hidden;
+    z-index: 9997; /* Above sections but below stickers */
 }
 
 /* Photo Section Decorations */
@@ -1020,3 +1021,5 @@ img {
 img:not([src]) {
     opacity: 0;
 }
+
+

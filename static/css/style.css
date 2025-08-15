@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #ff6b9d, #ffd93d, #6bcf7f, #4d9de0);
+    background: linear-gradient(135deg, #f8f9fc, #e8eaf6, #fce4ec, #f3e5f5);
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
     min-height: 100vh;
@@ -33,7 +33,7 @@ body {
 
 .floating-hearts i {
     position: absolute;
-    color: #ff69b4;
+    color: #d1c4e9;
     font-size: 20px;
     animation: floatUp 8s linear infinite;
     opacity: 0;
@@ -151,7 +151,7 @@ body {
 .word {
     display: inline-block;
     animation: wordPop 2s ease-in-out infinite;
-    background: linear-gradient(45deg, #ff6b9d, #ffd93d, #6bcf7f);
+    background: linear-gradient(45deg, #8e24aa, #ad7be9, #c5a3ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -170,7 +170,7 @@ body {
 .hero-subtitle {
     font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
-    color: #ff1744;
+    color: #8e24aa;
     margin-bottom: 30px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     animation: glow 3s ease-in-out infinite alternate;
@@ -178,10 +178,10 @@ body {
 
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #ff1744, 0 0 20px #ff1744, 0 0 30px #ff1744;
+        text-shadow: 0 0 10px #8e24aa, 0 0 20px #8e24aa, 0 0 30px #8e24aa;
     }
     to {
-        text-shadow: 0 0 5px #ff1744, 0 0 10px #ff1744, 0 0 15px #ff1744;
+        text-shadow: 0 0 5px #8e24aa, 0 0 10px #8e24aa, 0 0 15px #8e24aa;
     }
 }
 
@@ -197,9 +197,9 @@ body {
     animation: iconSpin 4s linear infinite;
 }
 
-.cake-icon { color: #ff6b9d; animation-delay: 0s; }
-.love-icon { color: #e91e63; animation-delay: 1s; }
-.gift-icon { color: #673ab7; animation-delay: 2s; }
+.cake-icon { color: #d1c4e9; animation-delay: 0s; }
+.love-icon { color: #b39ddb; animation-delay: 1s; }
+.gift-icon { color: #9575cd; animation-delay: 2s; }
 
 @keyframes iconSpin {
     0% { transform: rotate(0deg) scale(1); }
@@ -227,28 +227,28 @@ body {
 }
 
 .star-1 {
-    color: #ffd93d;
+    color: #e1bee7;
     left: 15%;
     animation-delay: 0s;
     top: 20px;
 }
 
 .star-2 {
-    color: #ff6b9d;
+    color: #d1c4e9;
     left: 35%;
     animation-delay: 1s;
     top: 10px;
 }
 
 .star-3 {
-    color: #6bcf7f;
+    color: #f3e5f5;
     right: 35%;
     animation-delay: 2s;
     top: 25px;
 }
 
 .star-4 {
-    color: #673ab7;
+    color: #b39ddb;
     right: 15%;
     animation-delay: 3s;
     top: 15px;
@@ -261,14 +261,14 @@ body {
 }
 
 .sparkle-1 {
-    color: #ff6b9d;
+    color: #e1bee7;
     left: 25%;
     animation-delay: 0.5s;
     top: 5px;
 }
 
 .sparkle-2 {
-    color: #ffd93d;
+    color: #d1c4e9;
     right: 25%;
     animation-delay: 2.5s;
     top: 30px;
@@ -292,7 +292,7 @@ body {
 .quote-text {
     font-family: 'Dancing Script', cursive;
     font-size: 1.8rem;
-    color: #e91e63;
+    color: #8e24aa;
     text-align: center;
     margin: 0;
     font-style: italic;
@@ -301,8 +301,8 @@ body {
 }
 
 @keyframes quoteGlow {
-    from { text-shadow: 1px 1px 3px rgba(233, 30, 99, 0.3), 0 0 10px rgba(233, 30, 99, 0.2); }
-    to { text-shadow: 1px 1px 3px rgba(233, 30, 99, 0.6), 0 0 20px rgba(233, 30, 99, 0.4); }
+    from { text-shadow: 1px 1px 3px rgba(142, 36, 170, 0.3), 0 0 10px rgba(142, 36, 170, 0.2); }
+    to { text-shadow: 1px 1px 3px rgba(142, 36, 170, 0.6), 0 0 20px rgba(142, 36, 170, 0.4); }
 }
 
 .quote-decorations {
@@ -313,7 +313,7 @@ body {
 
 .quote-icon {
     font-size: 1.2rem;
-    color: #ff6b9d;
+    color: #d1c4e9;
     animation: quoteIconFloat 2s ease-in-out infinite;
 }
 
@@ -338,7 +338,7 @@ body {
 .section-title {
     font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
-    color: #e91e63;
+    color: #8e24aa;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     position: relative;
@@ -359,15 +359,15 @@ body {
 .title-underline {
     width: 60px;
     height: 4px;
-    background: linear-gradient(45deg, #ff6b9d, #ffd93d);
+    background: linear-gradient(45deg, #d1c4e9, #e1bee7);
     margin: 15px auto 0;
     border-radius: 2px;
     animation: underlineGlow 2s ease-in-out infinite alternate;
 }
 
 @keyframes underlineGlow {
-    from { box-shadow: 0 0 10px rgba(255, 107, 157, 0.5); }
-    to { box-shadow: 0 0 20px rgba(255, 107, 157, 0.8); }
+    from { box-shadow: 0 0 10px rgba(209, 196, 233, 0.5); }
+    to { box-shadow: 0 0 20px rgba(209, 196, 233, 0.8); }
 }
 
 /* Section Background Decorations */
@@ -391,7 +391,7 @@ body {
 .section-heart {
     position: absolute;
     font-size: 2rem;
-    color: rgba(233, 30, 99, 0.6);
+    color: rgba(209, 196, 233, 0.6);
     animation: sectionHeartFloat 6s ease-in-out infinite;
 }
 
@@ -429,7 +429,7 @@ body {
 .video-reel {
     position: absolute;
     font-size: 2.5rem;
-    color: rgba(255, 107, 157, 0.4);
+    color: rgba(209, 196, 233, 0.4);
     animation: reelSpin 8s linear infinite;
 }
 
@@ -453,7 +453,7 @@ body {
 .play-decoration {
     position: absolute;
     font-size: 1.8rem;
-    color: rgba(103, 58, 183, 0.5);
+    color: rgba(179, 157, 219, 0.5);
     animation: playPulse 3s ease-in-out infinite;
 }
 
@@ -484,7 +484,7 @@ body {
 .envelope-float {
     position: absolute;
     font-size: 2rem;
-    color: rgba(255, 107, 157, 0.4);
+    color: rgba(209, 196, 233, 0.4);
     animation: envelopeFloat 5s ease-in-out infinite;
 }
 
@@ -508,7 +508,7 @@ body {
 .letter-heart {
     position: absolute;
     font-size: 1.5rem;
-    color: rgba(233, 30, 99, 0.5);
+    color: rgba(225, 190, 231, 0.5);
     animation: letterHeartBeat 2s ease-in-out infinite;
 }
 
@@ -532,7 +532,7 @@ body {
 .quill-decoration {
     position: absolute;
     font-size: 1.8rem;
-    color: rgba(103, 58, 183, 0.4);
+    color: rgba(179, 157, 219, 0.4);
     animation: quillWrite 4s ease-in-out infinite;
 }
 
@@ -563,7 +563,7 @@ body {
 .cake-float {
     position: absolute;
     font-size: 2.5rem;
-    color: rgba(255, 107, 157, 0.6);
+    color: rgba(225, 190, 231, 0.6);
     animation: cakeFloat 6s ease-in-out infinite;
 }
 
@@ -587,7 +587,7 @@ body {
 .gift-float {
     position: absolute;
     font-size: 2rem;
-    color: rgba(103, 58, 183, 0.6);
+    color: rgba(179, 157, 219, 0.6);
     animation: giftBounce 4s ease-in-out infinite;
 }
 
@@ -611,7 +611,7 @@ body {
 .balloon-float {
     position: absolute;
     font-size: 2rem;
-    color: rgba(108, 207, 127, 0.6);
+    color: rgba(243, 229, 245, 0.6);
     animation: balloonFloat 5s ease-in-out infinite;
 }
 
@@ -645,7 +645,7 @@ body {
     border-radius: 20px;
     padding: 30px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border: 3px solid #ff6b9d;
+    border: 3px solid #d1c4e9;
 }
 
 .video-container {
@@ -674,23 +674,23 @@ body {
 }
 
 .frame-1 {
-    border-color: #ff6b9d;
+    border-color: #d1c4e9;
     animation: frameGlow1 4s ease-in-out infinite;
 }
 
 .frame-2 {
-    border-color: #673ab7;
+    border-color: #b39ddb;
     animation: frameGlow2 4s ease-in-out infinite;
 }
 
 @keyframes frameGlow1 {
-    0%, 100% { box-shadow: 0 10px 25px rgba(255, 107, 157, 0.3); }
-    50% { box-shadow: 0 15px 35px rgba(255, 107, 157, 0.5); }
+    0%, 100% { box-shadow: 0 10px 25px rgba(209, 196, 233, 0.3); }
+    50% { box-shadow: 0 15px 35px rgba(209, 196, 233, 0.5); }
 }
 
 @keyframes frameGlow2 {
-    0%, 100% { box-shadow: 0 10px 25px rgba(103, 58, 183, 0.3); }
-    50% { box-shadow: 0 15px 35px rgba(103, 58, 183, 0.5); }
+    0%, 100% { box-shadow: 0 10px 25px rgba(179, 157, 219, 0.3); }
+    50% { box-shadow: 0 15px 35px rgba(179, 157, 219, 0.5); }
 }
 
 .photo-frame:hover {
@@ -711,14 +711,14 @@ body {
 }
 
 .decoration-heart-1, .decoration-heart-2 {
-    color: #e91e63;
+    color: #d1c4e9;
     top: 0;
     right: 0;
     animation-delay: 0s;
 }
 
 .decoration-star-1, .decoration-star-2 {
-    color: #ffd93d;
+    color: #e1bee7;
     top: 20px;
     right: 20px;
     animation-delay: 1s;
@@ -753,7 +753,7 @@ body {
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
     text-align: center;
-    color: #e91e63;
+    color: #8e24aa;
     font-weight: 600;
     margin-bottom: 15px;
 }
@@ -765,7 +765,7 @@ body {
     padding: 40px;
     position: relative;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    border: 3px solid #ff6b9d;
+    border: 3px solid #d1c4e9;
 }
 
 .letter-content {
@@ -793,7 +793,7 @@ body {
 .letter-salutation {
     font-family: 'Dancing Script', cursive;
     font-size: 1.8rem;
-    color: #e91e63;
+    color: #8e24aa;
     margin-bottom: 20px;
 }
 
@@ -810,7 +810,7 @@ body {
 .signature-name {
     font-family: 'Dancing Script', cursive;
     font-size: 1.5rem;
-    color: #e91e63;
+    color: #8e24aa;
     margin-top: 10px;
 }
 

@@ -216,13 +216,16 @@ body {
 
 .hero-photo-frame {
     background: linear-gradient(135deg, #fff, #f8f9fa);
-    border-radius: 15px;
-    padding: 15px;
+    border-radius: 50%;
+    padding: 8px;
     position: relative;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    border: 2px solid;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 4px solid;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: heroFrameFloat 4s ease-in-out infinite;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
 }
 
 .frame-small-1 {
@@ -247,11 +250,11 @@ body {
 
 .hero-photo-container {
     width: 100%;
-    height: 120px;
-    border-radius: 10px;
+    height: 100%;
+    border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15);
     position: relative;
 }
 
@@ -268,31 +271,7 @@ body {
 }
 
 .hero-upload-form {
-    margin-top: 8px;
-}
-
-.hero-upload-form .input-group {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.hero-upload-form .form-control {
-    border: none;
-    background: rgba(255, 255, 255, 0.9);
-    font-size: 0.8rem;
-}
-
-.hero-upload-form .btn {
-    border: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    font-size: 0.8rem;
-}
-
-.hero-upload-form .btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    display: none;
 }
 
 /* Section Styles */

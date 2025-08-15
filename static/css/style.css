@@ -246,6 +246,31 @@ body {
 .hero-photo-frame:hover {
     transform: translateY(-8px) scale(1.05);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.hero-photo-frame::after {
+    content: '📷';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-photo-frame:hover::after {
+    opacity: 1;
 }
 
 .hero-photo-container {
@@ -272,6 +297,16 @@ body {
 
 .hero-upload-form {
     display: none;
+}
+
+.hero-upload-form input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    top: 0;
+    left: 0;
 }
 
 /* Section Styles */

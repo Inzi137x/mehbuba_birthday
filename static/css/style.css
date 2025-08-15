@@ -216,16 +216,13 @@ body {
 
 .hero-photo-frame {
     background: linear-gradient(135deg, #fff, #f8f9fa);
-    border-radius: 50%;
-    padding: 8px;
+    border-radius: 15px;
+    padding: 15px;
     position: relative;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    border: 4px solid;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 2px solid;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: heroFrameFloat 4s ease-in-out infinite;
-    width: 140px;
-    height: 140px;
-    margin: 0 auto;
 }
 
 .frame-small-1 {
@@ -246,40 +243,15 @@ body {
 .hero-photo-frame:hover {
     transform: translateY(-8px) scale(1.05);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-}
-
-.hero-photo-frame::after {
-    content: '📷';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.hero-photo-frame:hover::after {
-    opacity: 1;
 }
 
 .hero-photo-container {
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
+    height: 120px;
+    border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 0;
-    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
@@ -296,17 +268,31 @@ body {
 }
 
 .hero-upload-form {
-    display: none;
+    margin-top: 8px;
 }
 
-.hero-upload-form input[type="file"] {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-    top: 0;
-    left: 0;
+.hero-upload-form .input-group {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-upload-form .form-control {
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 0.8rem;
+}
+
+.hero-upload-form .btn {
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.hero-upload-form .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Section Styles */

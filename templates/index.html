@@ -67,25 +67,35 @@
                     <!-- Small Photo Frames in Hero -->
                     <div class="hero-photo-frames mt-4">
                         <div class="row justify-content-center">
-                            <div class="col-4 col-md-2">
-                                <div class="hero-photo-frame frame-small-1" title="Click to upload photo">
+                            <div class="col-6 col-md-3">
+                                <div class="hero-photo-frame frame-small-1">
                                     <div class="hero-photo-container">
                                         <img id="hero-photo1" src="{{ url_for('static', filename='uploads/hero-photo1.jpg') }}" alt="Hero Photo 1" onerror="this.src='https://pixabay.com/get/gb5f31887106003846259ef0d61f8d64b10ccb2f68ff822e77df5600b57e066c5aab89c063185533bcc715cd1af1cdff3253d08f6113a35a17433084f46b065a9_1280.jpg'">
                                     </div>
-                                    <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="hero-upload-form" id="hero-form1">
+                                    <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="hero-upload-form mt-2">
                                         <input type="hidden" name="type" value="hero-photo1">
-                                        <input type="file" id="hero-file1" name="file" accept="image/*" style="display: none;">
+                                        <div class="input-group input-group-sm">
+                                            <input type="file" class="form-control form-control-sm" name="file" accept="image/*">
+                                            <button class="btn btn-outline-primary btn-sm" type="submit">
+                                                <i class="fas fa-upload"></i>
+                                            </button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <div class="hero-photo-frame frame-small-2" title="Click to upload photo">
+                            <div class="col-6 col-md-3">
+                                <div class="hero-photo-frame frame-small-2">
                                     <div class="hero-photo-container">
                                         <img id="hero-photo2" src="{{ url_for('static', filename='uploads/hero-photo2.jpg') }}" alt="Hero Photo 2" onerror="this.src='https://pixabay.com/get/g3201525e703ea135e816c6829434a1e371441bc38d38a13a8232e0480afa5aff779d8ff72328a6a7c7d1a13ad87b1e4969b39990dba5edb416d867ac019958b9_1280.jpg'">
                                     </div>
-                                    <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="hero-upload-form" id="hero-form2">
+                                    <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data" class="hero-upload-form mt-2">
                                         <input type="hidden" name="type" value="hero-photo2">
-                                        <input type="file" id="hero-file2" name="file" accept="image/*" style="display: none;">
+                                        <div class="input-group input-group-sm">
+                                            <input type="file" class="form-control form-control-sm" name="file" accept="image/*">
+                                            <button class="btn btn-outline-primary btn-sm" type="submit">
+                                                <i class="fas fa-upload"></i>
+                                            </button>
+                                        </div>
                                     </form>
                                 </div>
                             </div>

@@ -188,85 +188,25 @@ function initUploadForms() {
                 const fileName = this.files[0].name;
                 const fileSize = (this.files[0].size / 1024 / 1024).toFixed(2);
                 
-                // Update button text to show selected file (if button exists)
-                if (submitButton) {
-                    submitButton.innerHTML = `
-                        <i class="fas fa-upload"></i> Upload "${fileName}" (${fileSize}MB)
-                    `;
-                    submitButton.style.fontSize = '0.9rem';
-                }
+                // Update button text to show selected file
+                submitButton.innerHTML = `
+                    <i class="fas fa-upload"></i> Upload "${fileName}" (${fileSize}MB)
+                `;
+                submitButton.style.fontSize = '0.9rem';
                 
                 // Add preview for images
                 if (this.files[0].type.startsWith('image/')) {
                     showImagePreview(this.files[0], form);
                 }
-                
-                // Auto-submit for hero photo forms
-                if (form.id && form.id.startsWith('hero-form')) {
-                    console.log('Auto-submitting hero form:', form.id);
-                    form.submit();
-                }
             }
         });
         
         // Form submission feedback
-        if (submitButton) {
-            form.addEventListener('submit', function() {
-                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Uploading...';
-                submitButton.disabled = true;
-            });
-        }
+        form.addEventListener('submit', function() {
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Uploading...';
+            submitButton.disabled = true;
+        });
     });
-    
-    // Initialize hero photo frame click handlers
-    initHeroPhotoClickHandlers();
-}
-
-// Hero Photo Click Handlers
-function initHeroPhotoClickHandlers() {
-    // Hero photo frame 1
-    const heroFrame1 = document.querySelector('.hero-photo-frame.frame-small-1');
-    const heroFile1 = document.getElementById('hero-file1');
-    
-    if (heroFrame1 && heroFile1) {
-        heroFrame1.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Hero frame 1 clicked');
-            heroFile1.click();
-        });
-        
-        heroFile1.addEventListener('change', function() {
-            if (this.files && this.files[0]) {
-                console.log('Hero file 1 selected:', this.files[0].name);
-                const form = document.getElementById('hero-form1');
-                if (form) {
-                    form.submit();
-                }
-            }
-        });
-    }
-    
-    // Hero photo frame 2
-    const heroFrame2 = document.querySelector('.hero-photo-frame.frame-small-2');
-    const heroFile2 = document.getElementById('hero-file2');
-    
-    if (heroFrame2 && heroFile2) {
-        heroFrame2.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Hero frame 2 clicked');
-            heroFile2.click();
-        });
-        
-        heroFile2.addEventListener('change', function() {
-            if (this.files && this.files[0]) {
-                console.log('Hero file 2 selected:', this.files[0].name);
-                const form = document.getElementById('hero-form2');
-                if (form) {
-                    form.submit();
-                }
-            }
-        });
-    }
 }
 
 // Image Preview Function
